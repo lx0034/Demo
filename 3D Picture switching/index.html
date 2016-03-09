@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>3D Picture switching</title>
+	<style id="css">
+		*{
+			margin:0;
+			padding:0;
+		}
+		#containter{
+			width:800px;
+			height:300px;
+			margin:100px auto 0;
+			border:1px solid black;
+			position: relative;
+
+		}
+		ul,ol{
+			list-style: none;
+		}
+		ol{
+			float:right;
+			position:absolute;
+			top:300px;
+			right:0;
+			margin:10px 0 0 0;
+		}
+		#list2>li{
+			float:left;
+			margin-left:5px;
+		}
+		#list2>li{
+			display:block;
+			width:20px;
+			height:20px;
+			background: #333;
+			border-radius: 50%;
+			text-align: center;
+			text-decoration:none;
+			color:#fff;
+			font:bold 12px/20px "微软雅黑";
+		}
+		#list1{
+			width:800px;
+			height:300px;
+			-webkit-perspective:800px;
+		}
+		#list1>li{
+			width:50px;
+			height:300px;
+			float:left;
+			position:relative;
+			-webkit-transform-origin:center center -150px;
+			-webkit-transform-style:preserve-3d;
+			/*transition:1s;*/
+			/*-webkit-transform:rotateX(-90deg);*/
+		}
+		
+		#list1>li>a{
+			position:absolute;
+			width:50px;
+			height:300px;
+			top:0;
+			left:0;
+
+		}
+		
+		#list1>li>a:nth-of-type(1){
+			background:url(imgs/1.jpg) no-repeat;
+			background-size:cover;
+		}	
+		#list1>li>a:nth-of-type(2){
+			top:-300px;
+			background:url(imgs/2.jpg) no-repeat;
+			background-size:cover;
+			-webkit-transform-origin:bottom;
+			-webkit-transform:rotateX(90deg);
+		}
+		#list1>li>a:nth-of-type(3){
+			background:url(imgs/3.jpg) no-repeat;
+			background-size:cover;
+			-webkit-transform:translateZ(-300px) rotateX(-180deg);
+		}
+		#list1>li>a:nth-of-type(4){
+			top:300px;
+			background:url(imgs/4.jpg) no-repeat;
+			background-size:cover;
+			-webkit-transform-origin:top;
+			-webkit-transform:rotateX(-90deg);
+		}
+		#list1>li>span{
+			display:block;
+			width:300px;
+			height:300px;
+			background:#333;
+			position:absolute;
+		}
+		#list1>li>span:nth-of-type(1){
+			top:0;
+			left:-300px;
+			-webkit-transform-origin:right;
+			-webkit-transform:rotateY(-90deg);
+		}
+		#list1>li>span:nth-of-type(2){
+			top:0;
+			left:50px;
+			-webkit-transform-origin:left;
+			-webkit-transform:rotateY(90deg);
+		}
+		#list2>li.action{
+			background:red;
+		}
+	</style>
+	<script src="javascript.js"></script>
+</head>
+<body>
+	<div id="containter">
+		<ul id="list1">
+		</ul>
+		<ol id="list2">
+			<li>1</li>
+			<li>2</li>
+			<li>3</li>
+			<li>4</li>
+		</ol>
+	</div>
+</body>
+</html>
