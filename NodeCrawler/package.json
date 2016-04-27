@@ -1,0 +1,4 @@
+{
+	"name" : "NodeCrawler",
+	"main" : "./lib/mian.js"
+}

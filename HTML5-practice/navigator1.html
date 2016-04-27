@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>HTML5 navigator</title>
+	<script>
+	window.onload = function(){
+		var oBtn = doucment.getElementById('btn');
+		var oSpan = document.getElementsByTagName('span')[0];
+		oBtn.onclick = function (){
+			navigator.geolocation.getCurrentPosition(success,error,json);
+			function success(position){
+				oSpan.innerHTML = position.coords.longitude;
+			}
+			function error(err){
+				alert(err.code);
+			}
+			json = {
+				timeout:5000
+			};
+		};
+	};
+	</script>
+</head>
+<body>
+	<input type="button" id="btn" value="click">
+	<span></span>
+</body>
+</html>

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style id="css">
+	#container{
+		width:200px;
+		height:200px;
+		border:3px solid black;
+		margin:200px auto;
+		border-radius:50%;
+		position:relative;
+	}
+	#container ul{
+		width:200px;
+		height:200px;
+		margin:0;
+		padding:0;
+		list-style: none;
+		position:relative;
+	}
+	#container>ul>li{
+		width:2px;
+		height:6px;
+		background:black;
+		position:absolute;
+		top:0;
+		left:99px;
+		transform-origin:center 100px;
+	}
+	#container>ul>li:nth-of-type(5n+1){
+		height:8px;
+	}
+	#hour{
+		width:6px;
+		height:45px;
+		background:black;
+		position:absolute;
+		top:55px;
+		left:97px;
+		transform-origin:bottom;
+	}
+	#min{
+		width:4px;
+		height:70px;
+		background:green;
+		position:absolute;
+		top:30px;
+		left:98px;
+		transform-origin:bottom;
+	}
+	#sec{
+		width:1px;
+		height:90px;
+		background:red;
+		position:absolute;
+		top:10px;
+		left:99px;
+		transform-origin:bottom;
+	}
+	#pot{
+		width:10px;
+		height:10px;
+		background:black;
+		border-radius:50%;
+		position:absolute;
+		top:95px;
+		left:95px;
+	}
+	</style>
+</head>
+<body>
+	<div id="container">
+		<ul>
+		</ul>
+		<div id="pot"></div>
+		<div id="hour"></div>
+		<div id="min"></div>
+		<div id="sec"></div>
+	</div>
+<script>
+	(function(){
+
+		var oHour = document.getElementById('hour');
+		var oMin = document.getElementById('min');
+		var oSec = document.getElementById('sec');
+		var oUl = document.getElementsByTagName('ul')[0];
+		var oCss = document.getElementById('css');
+		var cFrag = document.createDocumentFragment();
+		var timer = null;
+		var str = '';
+
+		for(var i=0;i < 60;i++){
+			var cLi = document.createElement('li');			
+			str += '#container>ul>li:nth-of-type('+ (i+1) +'){transform:rotate('+ i*6 +'deg);}';
+			cFrag.appendChild(cLi);
+		}
+		oUl.appendChild(cFrag);
+		oCss.innerHTML += str;
+		
+		timer = setInterval(function(){
+			var date = new Date();
+			oHour.style.transform = 'rotate('+ (date.getHours() + date.getMinutes()/60)*30 +'deg)';
+			oMin.style.transform = 'rotate('+ date.getMinutes()*6 +'deg)';
+			oSec.style.transform = 'rotate('+ date.getSeconds()*6 +'deg)';
+		},1000);
+
+	})();
+</script>
+</body>
+</html>
