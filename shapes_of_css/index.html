@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>shapes_of_css</title>
+	<style>
+	*{
+		margin:0;
+		padding:0;
+	}
+	div{
+		float:left;
+	}
+	#triangle_up{
+		width:0;
+		height:0;
+		/*background:red;*/
+		border-bottom:100px solid red;
+		border-right:50px solid transparent;
+		border-left:50px solid transparent;
+	}
+	#triangle_down{
+		width:0;
+		height:0;
+		border-top:100px solid red;
+		border-left:50px solid transparent;
+		border-right:50px solid transparent;
+	}
+	#triangle_top_left{
+		width:0;
+		height:0;
+		border-top:100px solid red;
+		border-right:100px solid transparent;
+	}
+	#trapzoid{
+		width:100px;
+		height:0;
+		border-left:50px solid transparent;
+		border-right:50px solid transparent;
+		border-bottom:100px solid red;
+	}
+	#star_six{
+		width:0;
+		height:0;
+		border-bottom:100px solid red;
+		border-left:50px solid transparent;
+		border-right:50px solid transparent;
+	}
+	#star_six:after{
+		content:'';
+		width:0;
+		height:0;
+		border-top:100px solid red;
+		border-left:50px solid transparent;
+		border-right:50px solid transparent;
+		position:absolute;
+		top:30px;
+		left:500px;
+	}
+	#star_five{
+		width:0;
+		height:0;
+		border-top:50px solid red;
+		border-left:100px solid transparent;
+		border-right:100px solid transparent;
+	}
+	</style>
+</head>
+<body>
+	<div id="triangle_up"></div>
+	<div id="triangle_down"></div>
+	<div id="triangle_top_left"></div>
+	<div id="trapzoid"></div>
+	<div id="star_six"></div><br />
+	<div id="star_five"></div>
+</body>
+</html>
