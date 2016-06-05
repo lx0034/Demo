@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+	.box{
+		/*width:200px;*/
+		height:200px;
+		line-height:200px;
+		border:1px solid black;
+	}
+	.fill-available{
+		display:inline-block;
+		width:-webkit-fill-available;
+		/*vertical-align:middle;*/
+		/*height:100px;*/
+		background:red;
+	}
+	</style>
+</head>
+<body>
+	<div class="box">
+		<div class="fill-available"></div>
+	</div>
+	<script>
+	function time(){
+		var i=0;
+		function aa(){
+			var oDiv = document.getElementsByClassName('fill-available')[0];
+			oDiv.innerHTML = i++;
+			setTimeout(arguments.callee,1000);
+		}
+		setTimeout(aa,1000);
+	}
+	time();
+	</script>
+</body>
+</html>

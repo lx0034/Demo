@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script type="text/javascript" src="vue.js"></script>
+</head>
+<body>
+	<div id="app">
+		{{ message }}
+	</div>
+	<!-- <div id="move"></div> -->
+	<script>
+
+	// new vue({
+	// 	el: '#app',
+	// 	data: {
+	// 		message: 'Hello vue.js!'
+	// 	}
+	// });
+
+	// var oMove = document.getElementById('move');
+	// var timer = null;
+	// clearInterval(timer);
+	// timer = setInterval(function(){
+	// 	var x = 5;
+	// 	var y = Math.sin(oMove.offsetLeft)*5;
+	// 	oMove.style.left = oMove.offsetLeft + x + 'px';
+	// 	oMove.style.top = oMove.offsetTop + y + 'px';
+	// },30);
+
+	// String.prototype.removeword = function(arrWords){
+	// 	var newstr = this;
+	// 	for(var i=0;i < arrWords.length;i++){
+	// 		var exp = new RegExp(arrWords[i],'g');
+	// 		newstr = newstr.replace(exp,'*');
+	// 	}
+	// 	return newstr;
+	// }
+	// var str = 'abcdeafg';
+
+	// console.log( str.removeword(['a','b','g']) );
+
+
+	//工厂模式
+	// function createObj(name, age){
+	// 	var obj = new Object();
+	// 	obj.name = name;
+	// 	obj.age = age;
+	// 	obj.sayName = function(){
+	// 		console.log(this.name);
+	// 	};
+	// 	return obj;
+	// }
+
+	// var person = createObj('lee', 22);
+
+	//构造函数模式
+	// function createObj(name, age){
+	// 	this.name = name;
+	// 	this.age = age;
+	// 	this.sayName = function(){
+	// 		console.log(this.name);
+	// 	};
+	// }
+
+	// var person = new createObj('lee',22);
+
+	//原型模式
+	// function createObj(){
+
+	// }
+	// createObj.prototype.name = 'lee';
+	// createObj.prototype.age = 22;
+	// createObj.prototype.sayName = function(){
+	// 	console.log(this.name);
+	// }
+
+	// var person = new createObj();
+
+	//动态原型模式
+	// function createObj(name, age){
+	// 	this.name = name;
+	// 	this.age = age;
+	// 	if( !createObj.prototype.sayName ){
+	// 		createObj.prototype.sayName = function(){
+	// 			console.log(this.name);
+	// 		};
+	// 	}
+	// }
+	// var person = new createObj('lee', 22);
+
+	//稳妥构造函数模式
+	// function createObj(name, age){
+	// 	this.sayName = function(){
+	// 		console.log(this.name);
+	// 	};
+	// }
+
+	// var person = new createObj('lee', 22);
+
+	//寄生构造函数模式
+	// function createObj(name, age){
+	// 	var obj = new Object();
+	// 	obj.name = name;
+	// 	obj.age = age;
+	// 	obj.sayName = function(){
+	// 		console.log(this.name);
+	// 	};
+	// 	return obj;
+	// }
+
+	// var person = new createObj('lee', 22);
+
+	//组合模式
+	// function createObj(name, age){
+	// 	this.name = name;
+	// 	this.age = age;
+	// }
+	// createObj.prototype.sayName = function(){
+	// 	console.log(this.name);
+	// };
+
+	// var person = new createObj('lee', 22);
+
+	//继承六种方式
+	//构造函数模式
+	// function superType(name){
+	// 	this.name = name;
+	// 	this.sayName =function(){
+	// 		console.log(this.name);
+	// 	};
+	// }
+	// function subType(name, age){
+	// 	superType.call(tis,name);
+	// 	this.age = age;
+	// }
+	
+
+	// var person = new subType('lee',22);
+
+	//原型链模式
+	// function superType(name){
+	// 	this.name = name;
+	// }
+	// superType.prototype.sayName = function(){
+	// 	console.log(this.name);
+	// }
+	// function subType(){
+	// }
+	// subType.prototype = new superType('lee');
+
+	// var person = new subType();
+
+	//原型式继承
+	// function inherit(superType){
+	// 	var F = function(){};
+	// 	F.prototype = new superType();
+	// 	return F;
+	// }
+
+	//组合式继承
+	// function superType(name){
+	// 	this.name = name;
+	// }
+	// superType.prototype.sayName = function(){
+	// 	console.log(this.name);
+	// };
+	// function subType(name, age){
+	// 	superType.call(this,name);
+	// 	this.age = age;
+	// }
+	// function inherit(super,sub){
+	// 	var prototype = Object(super.prototype);
+	// 	prototype.constructor = sub;
+	// 	sub.prototype = prototype;
+	// }
+	// inherit(superType,subType);
+
+	// var person = new subType('lee',22);
+
+	//寄生式继承
+	// function subType(name){
+	// 	this.name = name;
+	// }
+	// subType.prototype = 
+
+
+
+	</script>
+</body>
+</html>

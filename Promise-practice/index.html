@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>promise</title>
+</head>
+<body>
+	<script>
+	
+	//链式调用，通过return一个Promise对象实现，也可以返回一个数据，可以直接在后面的then得到数据
+	// runAsync().then(function(data){
+
+	// 	console.log(data);
+	// 	return runAsync2();
+
+	// }).then(function(data){
+
+	// 	console.log(data);
+	// 	return runAsync3();
+
+	// }).then(function(data){
+
+	// 	console.log(data);
+	// 	return runAsync4();
+
+	// });
+
+
+	// runAsync().then(function(data){
+	// 	console.log(data);
+	// 	return 'data2';
+	// }).then(function(data){
+	// 	console.log(data);
+	// 	return 'data3';
+	// }).then(function(data){
+	// 	console.log(data);
+	// });
+	
+	// runAsync().then(function(data){
+	// 	console.log(data);
+	// 	console.log(aaa);
+	// },function(reason){
+	// 	console.log(reason);
+	// })
+
+	// runAsync().then(function(data){
+	// 	console.log(data);
+	// 	console.log(hahah);
+	// }).catch(function(reason){
+	// 	alert(1);
+	// 	console.log(reason);
+	// });
+
+	// all方法：
+	Promise.all([runAsync(), runAsync2(), runAsync3()]).then(function(data){
+		console.log(data);
+	});
+	
+
+	//race方法
+	// Promise.race([runAsync(),runAsync2(),runAsync3()]).then(function(data){
+	// 	console.log(data);
+	// });
+
+
+	function runAsync(){
+		var p = new Promise(function(resolve, reject){
+			setTimeout(function(){
+				console.log('finish1');
+				resolve('data1');
+				// reject('some error message');
+			},1000);
+		});
+		return p;
+	}
+
+	function runAsync2(){
+		var p = new Promise(function(resolve, reject){
+			setTimeout(function(){
+				console.log('finish2');
+				resolve('data2');
+				// console.log(aa);
+			},1000);
+		});
+		return p;
+	}
+	function runAsync3(){
+		var p = new Promise(function(resolve, reject){
+			setTimeout(function(){
+				console.log('finish3');
+				resolve('data3');
+			},1000);
+		});
+		return p;
+	}
+	function runAsync4(){
+		var p = new Promise(function(resolve, reject){
+			setTimeout(function(){
+				console.log('finish4');
+				resolve('data4');
+			},1000);
+		});
+		return p;
+	}
+	</script>
+
+</body>
+</html>
