@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script type="text/javascript" src="./template.js"></script>
+</head>
+<body>
+	<div id="container"></div>
+	<div id="container1"></div>
+	
+
+	<script type="text/html" id="htmlmoban">
+	{{if isAdmin}}
+		<h1>{{title}}</h1>
+		<ul>
+			{{each list as value index}}
+				<li>{{index}} - {{value}}</li>
+			{{/each}}
+			{{each obj as value index}}
+				<li>{{index}}: {{value}}</li>
+			{{/each}}
+		</ul>
+		<div>{{name}}</div>
+		<div>{{#name}}</div>
+	{{/if}}
+	</script>
+		
+	<script>
+	var data = {
+		title: "hello world",
+		isAdmin: true,	
+		list: ['111','222','333'],
+		obj: {
+			data1: 'lee',
+			data2: 'x',
+			data3: 'y'
+		},
+		name: '<h2>hahah</h2>'
+	};
+	var html = template('htmlmoban',data);
+	document.getElementById('container').innerHTML = html;
+	</script>
+
+	<script type="text/javascript">
+		var source = "<ol><li>{{title}}</li>{{each list as index value}}<li>{{index}}: {{value}}</li>{{/each}}</ol>"
+		var render = template.compile(source);
+		var html1 = render(data);
+		document.getElementById('container1').innerHTML = html1;
+	</script>
+
+	<div id="include"></div>
+	<script type="text/html" id="script_include">
+		{{include 'htmlmoban'}}
+	</script>
+	<script type="text/javascript">
+	//嵌套模板
+	document.getElementById('include').innerHTML = html;
+	</script>
+	
+	<div id="test"></div>
+	<script type="text/html" id="test_1">
+		{{each list as value index}}
+			<span>{{index}}: {{value}}</span><br />
+		{{/each}}
+		<ul>
+		{{each list as value index}}
+			<li>{{index}}:{{value}}</li>
+		{{/each}}
+		</ul>
+	</script>
+	<script type="text/javascript">
+		var testData = {
+			name: 'test1',
+			age: 22,
+			height: '100px',
+			width: '200px',
+			list: [1,2,3]
+		};
+		var text1 = template('test_1',testData);
+		document.getElementById('test').innerHTML = text1;
+	</script>
+
+</body>
+</html>

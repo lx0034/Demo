@@ -13,7 +13,29 @@
 		height:1136px;
 		background-color:red;
 	}
+	
 	</style>
+	<script>
+		var dsa = "{\"Person\":[" + result +"]}"
+
+		function ajax(callback){
+			var xhr = new XMLHttpRequrst();
+			xhr.onreadystatechange = function(){
+				if(xhr.readyState == 4){
+					if(xhr.status){
+						callback(JSON.parse(xhr.responseText));
+					}
+				}
+			};
+		}
+
+		function callback(data){
+			var json = "{\"object\":[" + data + "]}";
+			var obj = JSON.parse(json);	//在前端拼接的json字符串不能直接被JSON.parse方法解析，使用eval方法（有安全性问题）
+			var objEval = eval(json);
+
+		}
+	</script>
 </head>
 <body>
 	<div></div>
