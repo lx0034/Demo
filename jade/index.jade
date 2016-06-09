@@ -1,0 +1,32 @@
+extends layout
+block content
+	mixin moban
+		p 这是一个mixins
+	+moban
+
+	mixin mobancanshu(name, age)
+		p #{name}
+		p #{age}
+	+mobancanshu('matrix', 22)
+
+	include include.html
+
+	span(data-num='span1') jade模板练习
+
+	- var name = 'content'
+	span= name
+
+	div#div1.class1 id&class
+	
+
+	//- 注释内容
+	//
+		注释内容注释内容
+		注释内容
+
+	- var test = [1,{a:1,b:2,c:3,d:4},3,4,5]
+	ul
+		each i in test
+			if typeof i != 'object'
+				li #{i}
+	
