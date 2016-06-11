@@ -113,7 +113,7 @@
 		/*
 		*	封装ajax方法
 		*/
-		function Ajax(method, url, options, callback){
+		function Ajax(url, options, callback){
 
 			var getXHR = (function(){			//惰性载入函数
 				if(typeof XMLHttpRequest !== 'undefined'){
@@ -232,7 +232,7 @@
 		/*
 		*	调用ajax方法（get方式、无参数）
 		*/
-		Ajax('get', 'http://photo-sync.herokuapp.com/photos', {}, HandleAjax);
+		Ajax('http://photo-sync.herokuapp.com/photos', {type:"get",data:null}, HandleAjax);
 
 
 
