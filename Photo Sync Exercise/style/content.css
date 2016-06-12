@@ -1,0 +1,29 @@
+body{
+	width: 100%;
+	min-width: 1000px;
+	text-align: center;
+}
+section{
+	width:100%;
+}
+section>h3{
+	font:bold 16px/40px 'microsoft yahei';
+	margin: 10px 0 10px 0;
+}
+section>figure>img{
+	border:1px solid #999;
+	padding:5px;
+	margin:0 10px 20px 0;
+}
+.maxWidth{
+	max-width: 160px;
+	height: auto;
+}
+.maxHeight{
+	width: auto;
+	max-height: 160px;
+}
+.equal{
+	width: 160px;
+	height: 160px;
+}
