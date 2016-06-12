@@ -1,6 +1,9 @@
 	(function(){
 
-	var nextURL = null;
+	var nextURL = '';
+
+
+	//start 第一步
 
 	/*
 	*	对传入的数据按时间分组函数
@@ -57,7 +60,11 @@
 			return aft - pre;
 		});
 	}
+	//end第一步
 
+
+
+	//start第二步
 
 	/*
 	*	封装ajax方法
@@ -179,7 +186,11 @@
 		cSection.appendChild(cFigure);
 		document.body.appendChild(cSection);
 	}
+	//end第二步
 
+
+
+	//start第三步（加分项）
 
 	/*
 	*	函数节流：如果一个DOM事件触发过于频繁，则可以采用函数节流的方式，控制其触发次数，从而达到提高性能的目的
@@ -217,6 +228,7 @@
 	window.onscroll = function(){
 		throttle(HandleScroll);
 	};
+	//end第三步（加分项）
 
 
 	/*
