@@ -7,9 +7,31 @@
 </head>
 <body>
 	<div id="app">
-		{{ message }}
+		{{message}}
+		<input v-model="message">
 	</div>
+	
+	<div id="app2">
+		<ul>
+			<li v-for="todo in todos">
+				{{ todo.text }}
+			</li>
+		</ul>
+	</div>
+
+	<div id="app3">
+		<p>
+			{{ message }}
+		</p>
+		<button v-on:click="reverseMessage">
+			Reverse Message
+		</button>
+
+	</div>
+		
+	
 	<!-- <div id="move"></div> -->
+
 	<script>
 
 	// new vue({
@@ -188,5 +210,6 @@
 
 
 	</script>
+	<script type="text/javascript" src="./js/app.js"></script>
 </body>
 </html>
