@@ -1,0 +1,33 @@
+*{
+	margin:0;
+	padding:0;
+}
+header{
+	width:100%;
+	height:80px;
+	text-align: center;
+}
+header>h2{
+	font: 40px/80px "microsoft yahei";
+}
+
+#main{
+	box-sizing:border-box;
+	width: 100%;
+	height: 500px;
+	border: 1px solid red;
+	margin:0 auto;
+	font-size: 0;
+	/*text-align: center;*/
+}
+#main>section{
+	box-sizing:border-box;
+	width:50%;
+	height:90%;
+	border:1px solid black;
+	float:left;
+	font:20px/24px "microsoft yehei";
+}
+#main>section:nth-of-type(1){
+	padding: 10px;
+};

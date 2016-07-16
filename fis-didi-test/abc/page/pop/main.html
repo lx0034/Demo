@@ -1,0 +1,47 @@
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+    <meta name="format-detection" content="telephone=no" />
+    <title>活动</title>
+
+</head>
+
+<body>
+
+	<div class="main" id="main">
+        <!--第一步---->
+        <link rel="import" href="/components/first/first.html?__inline">
+
+        <!--第二步---->
+        <link rel="import" href="/components/second/second.html?__inline">
+       
+        <!--第三步---->
+        <link rel="import" href="/components/third/third.html?__inline">
+        
+	</div>
+    <div class="box">
+        <img src="./img/didi.png" alt="" class="pic"> 
+    </div>
+    <!-- 基础同步依赖代码 --> 
+    <!--SCRIPT_PLACEHOLDER-->
+    <!-- resourcemap --> 
+    <!--RESOURCEMAP_PLACEHOLDER-->
+    <!--
+        @require "/lib/lib.js"
+        @require "/css/lib.css"
+    -->
+    <div>
+    php data:<?php echo $didi ?>
+    </div>
+    <script>
+    require('./main.js');
+    </script>
+
+</body>
+
+</html>

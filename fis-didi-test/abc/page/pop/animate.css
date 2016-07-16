@@ -1,0 +1,48 @@
+
+/**animate start**/
+.animate{
+	position: relative;
+}
+.animate .from_page{
+	position: relative;
+	display: block;
+	-webkit-transition: all 300ms ease-in;
+	transition: all 300ms;
+}
+.animate .to_page{
+	display: block !important;
+	position: absolute;
+	-webkit-transition: all 300ms ease-out;
+	transition: all 300ms;
+}
+
+.begin_animate .to_page {
+	transform: translate3d(0, 100px,0);
+	-webkit-transform: translate3d(0, 100px,0);
+	opacity: 0;
+	top: 0px;
+}
+.begin_animate .from_page {
+	transform: translate3d(0, 0,0);
+	-webkit-transform: translate3d(0, 0,0);
+	opacity: 1;
+}
+
+.end_animate .from_page{
+	-webkit-transform: translate3d(0, -100px,0);
+	opacity: 0;
+}
+.end_animate .to_page{
+	-webkit-transform: translate3d(0, 0px,0);
+	opacity: 1;
+	top: 0px;
+}
+.ended_animate .from_page{
+	display: none;
+}
+.ended_animate .to_page{
+	display: block;
+}
+
+
+/**animate end**/

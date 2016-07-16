@@ -1,0 +1,70 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'C:\\Program Files\\nodejs\\\\node.exe',
+1 verbose cli   'C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js',
+1 verbose cli   'i',
+1 verbose cli   '-g',
+1 verbose cli   'fis-command-project',
+1 verbose cli   '--registry=http://registry.npm.taobao.org' ]
+2 info using npm@1.4.3
+3 info using node@v0.10.26
+4 verbose node symlink C:\Program Files\nodejs\\node.exe
+5 verbose cache add [ 'fis-command-project', null ]
+6 verbose cache add name=undefined spec="fis-command-project" args=["fis-command-project",null]
+7 verbose parsed url { protocol: null,
+7 verbose parsed url   slashes: null,
+7 verbose parsed url   auth: null,
+7 verbose parsed url   host: null,
+7 verbose parsed url   port: null,
+7 verbose parsed url   hostname: null,
+7 verbose parsed url   hash: null,
+7 verbose parsed url   search: null,
+7 verbose parsed url   query: null,
+7 verbose parsed url   pathname: 'fis-command-project',
+7 verbose parsed url   path: 'fis-command-project',
+7 verbose parsed url   href: 'fis-command-project' }
+8 silly lockFile 7d1f0618-fis-command-project fis-command-project
+9 verbose lock fis-command-project C:\Users\ACER\AppData\Roaming\npm-cache\7d1f0618-fis-command-project.lock
+10 silly lockFile 7d1f0618-fis-command-project fis-command-project
+11 silly lockFile 7d1f0618-fis-command-project fis-command-project
+12 verbose addNamed [ 'fis-command-project', '' ]
+13 verbose addNamed [ null, '*' ]
+14 silly lockFile b1422219-fis-command-project fis-command-project@
+15 verbose lock fis-command-project@ C:\Users\ACER\AppData\Roaming\npm-cache\b1422219-fis-command-project.lock
+16 silly addNameRange { name: 'fis-command-project', range: '*', hasData: false }
+17 verbose url raw fis-command-project
+18 verbose url resolving [ 'http://registry.npm.taobao.org/', './fis-command-project' ]
+19 verbose url resolved http://registry.npm.taobao.org/fis-command-project
+20 info trying registry request attempt 1 at 15:48:42
+21 http GET http://registry.npm.taobao.org/fis-command-project
+22 http 404 http://registry.npm.taobao.org/fis-command-project
+23 silly registry.get cb [ 404,
+23 silly registry.get   { 'content-type': 'application/json',
+23 silly registry.get     'cache-control': 'max-age=0',
+23 silly registry.get     'content-length': '2',
+23 silly registry.get     'accept-ranges': 'bytes',
+23 silly registry.get     date: 'Tue, 12 Jul 2016 07:48:51 GMT',
+23 silly registry.get     via: '1.1 varnish',
+23 silly registry.get     connection: 'keep-alive',
+23 silly registry.get     'x-served-by': 'cache-itm7420-ITM',
+23 silly registry.get     'x-cache': 'MISS',
+23 silly registry.get     'x-cache-hits': '0',
+23 silly registry.get     'x-timer': 'S1468309731.271208,VS0,VE165',
+23 silly registry.get     vary: 'Accept-Encoding' } ]
+24 silly addNameRange number 2 { name: 'fis-command-project', range: '*', hasData: true }
+25 silly addNameRange versions [ undefined, [] ]
+26 error TypeError: Cannot read property 'latest' of undefined
+26 error     at next (C:\Program Files\nodejs\node_modules\npm\lib\cache.js:744:35)
+26 error     at C:\Program Files\nodejs\node_modules\npm\lib\cache.js:732:5
+26 error     at saved (C:\Program Files\nodejs\node_modules\npm\node_modules\npm-registry-client\lib\get.js:148:7)
+26 error     at C:\Program Files\nodejs\node_modules\npm\node_modules\graceful-fs\polyfills.js:133:7
+26 error     at Object.oncomplete (fs.js:107:15)
+27 error If you need help, you may report this *entire* log,
+27 error including the npm and node versions, at:
+27 error     <http://github.com/npm/npm/issues>
+28 error System Windows_NT 6.2.9200
+29 error command "C:\\Program Files\\nodejs\\\\node.exe" "C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js" "i" "-g" "fis-command-project" "--registry=http://registry.npm.taobao.org"
+30 error cwd G:\github\Demo\fis-didi-test
+31 error node -v v0.10.26
+32 error npm -v 1.4.3
+33 error type non_object_property_load
+34 verbose exit [ 1, true ]

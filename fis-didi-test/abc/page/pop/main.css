@@ -1,0 +1,40 @@
+html,body{
+	background: #f0f0f0;
+	max-width: 768px;
+	margin: 0 auto;
+}
+#main{
+}
+
+
+.form{
+	width: 100%;
+	display: none;
+}
+@size: 50px;
+.box{
+	.pic{
+		height: @size;
+		width: @size;
+	}	
+}
+//演示在css中嵌入资源
+@import url('animate.css?__inline');
+
+/*演示字体压缩*/
+@font-face {
+  font-family: 'xiaofeng';
+  src: url('xiaofeng.eot');
+  src:
+    url('xiaofeng.eot?#fis-didi') format('embedded-opentype'),
+    url('xiaofeng.woff') format('woff'),
+    url('xiaofeng.ttf') format('truetype'),
+    url('xiaofeng.svg') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/*使用选择器指定字体*/
+.test{
+    font-family: 'xiaofeng';
+}
