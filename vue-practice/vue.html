@@ -7,7 +7,7 @@
 </head>
 <body>
 	<div id="app">
-		{{message}}
+		{{ message }}
 		<input v-model="message">
 	</div>
 	
@@ -23,10 +23,18 @@
 		<p>
 			{{ message }}
 		</p>
-		<button v-on:click="reverseMessage">
-			Reverse Message
-		</button>
+		<button v-on:click="reverseMessage">Reverse Message</button>
+	</div>
 
+
+	<div id="app4">
+		<input v-model="newTodo" v-on:keyup.enter="addTodo">
+		<ul>
+			<li v-for="todo in todos">
+				<span> {{todo.text}} </span>
+				<button v-on:click="removeTodo($index)">X</button>
+			</li>
+		</ul>
 	</div>
 		
 	
