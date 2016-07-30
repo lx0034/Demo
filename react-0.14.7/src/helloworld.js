@@ -1,4 +1,12 @@
 ReactDOM.render(
-	<h1>Hello,world</h1>,
+    return (
+        <h1>Hello,world</h1>,
+    );
+	
 	document.getElementById('example')
-);	
+);
+React.creatClass({
+    Reder: function () {
+
+    }
+});

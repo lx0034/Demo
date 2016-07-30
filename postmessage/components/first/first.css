@@ -1,0 +1,19 @@
+.form_first{
+	background-color: red;	
+	@size: 100px;
+	.img_1,
+	.img_2,
+	.img_3{
+		width: @size;
+		height: @size;
+	}
+	.img_1{
+		background: url(img/1.png?__sprite)  no-repeat;	
+	}
+	.img_2{
+		background: url(img/2.jpg?__sprite) no-repeat;	
+	}
+	.img_3{
+		background: url(img/3.png?__sprite) no-repeat;	
+	}
+}
